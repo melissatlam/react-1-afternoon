@@ -1,4 +1,4 @@
-<img src="https://s3.amazonaws.com/devmountain/readme-logo.png" width="250" align="right">
+<!-- <img src="https://s3.amazonaws.com/devmountain/readme-logo.png" width="250" align="right">
 
 # Project Summary
 
@@ -182,9 +182,9 @@ export default class TopicBrowser extends Component {
 
 </details>
 
-<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/2-2.png" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/2-2.png" /> -->
 
-## Step 2
+<!-- ## Step 2
 
 ### Summary
 
@@ -192,12 +192,12 @@ In this step, we'll render all of our topics from the `Topics` folder, create th
 
 ### Instructions
 
-* Create a basic outline for each topic component ( the same exact way we did the `TopicBrowser` component ):
-  * Make sure the name of the class is the same name as the file.
-  * Have the component render a `<p>` element saying the name of the component.
-* Open `src/components/TopicBrowser/TopicBrowser.js`.
-* Import all the topic files from `src/components/Topics` into `src/components/TopicBrowser/TopicBrowser.js`.
-* Render a parent `div` element containing all of the Topic components.
+- Create a basic outline for each topic component ( the same exact way we did the `TopicBrowser` component ):
+  - Make sure the name of the class is the same name as the file.
+  - Have the component render a `<p>` element saying the name of the component.
+- Open `src/components/TopicBrowser/TopicBrowser.js`.
+- Import all the topic files from `src/components/Topics` into `src/components/TopicBrowser/TopicBrowser.js`.
+- Render a parent `div` element containing all of the Topic components.
 
 <details>
 
@@ -208,21 +208,20 @@ In this step, we'll render all of our topics from the `Topics` folder, create th
 Let's start by going into our Topics folder. Inside we will see 5 javascript files, inside these files we will create a React component that solves a certain computer science toy problem. The basic outline is going to be similiar across these components with the only difference being the `<p>` element that gets rendered.
 
 Creating a React component:
-* `import React, { Component } from 'react'`
-* Create the class for your new component. The format is: `class ClassNameGoesHere extends Component {}`
-* Use the `render() {}` method to get elements to `render` onto the DOM. JSX goes inside a `return` statement of the `render() {}` method.
-* Export your newly created class either on the same line of it's declaration or at the bottom of the file.
+
+- `import React, { Component } from 'react'`
+- Create the class for your new component. The format is: `class ClassNameGoesHere extends Component {}`
+- Use the `render() {}` method to get elements to `render` onto the DOM. JSX goes inside a `return` statement of the `render() {}` method.
+- Export your newly created class either on the same line of it's declaration or at the bottom of the file.
 
 Here is what the `EvenAndOdd` component will look like applying these bullet points.
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class EvenAndOdd extends Component {
   render() {
-    return (
-      <p> EvenAndOdd Component </p>
-    )
+    return <p> EvenAndOdd Component </p>;
   }
 }
 ```
@@ -232,13 +231,11 @@ export default class EvenAndOdd extends Component {
 <summary> <code> FilterObject.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class FilterObject extends Component {
   render() {
-    return (
-      <p> FilterObject Component </p>
-    )
+    return <p> FilterObject Component </p>;
   }
 }
 ```
@@ -250,13 +247,11 @@ export default class FilterObject extends Component {
 <summary> <code> FilterString.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class FilterString extends Component {
   render() {
-    return (
-      <p> FilterString Component </p>
-    )
+    return <p> FilterString Component </p>;
   }
 }
 ```
@@ -268,13 +263,11 @@ export default class FilterString extends Component {
 <summary> <code> Palindrome.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Palindrome extends Component {
   render() {
-    return (
-      <p> Palindrome Component </p>
-    )
+    return <p> Palindrome Component </p>;
   }
 }
 ```
@@ -286,13 +279,11 @@ export default class Palindrome extends Component {
 <summary> <code> Sum.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Sum extends Component {
   render() {
-    return (
-      <p> Sum Component </p>
-    )
+    return <p> Sum Component </p>;
   }
 }
 ```
@@ -325,14 +316,14 @@ export default class TopicBrowser extends Component {
 Now that they are imported into our `TopicBrowser` component we can render them in our `return`. Similiar to how we rendered `TopicBrowser` in `App.js` we'll wrap each component we imported in `< />`. Since we are trying to `render` more than component we'll have to wrap the components in a `div`. The `return` of a `render` method can only return one element, but there is no limit to how much you can nest in that one element. Your `TopicBrowser` should look like:
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // Topics
-import EvenAndOdd from '../Topics/EvenAndOdd'
-import FilterObject from '../Topics/FilterObject'
-import FilterString from '../Topics/FilterString'
-import Palindrome from '../Topics/Palindrome'
-import Sum from '../Topics/Sum'
+import EvenAndOdd from "../Topics/EvenAndOdd";
+import FilterObject from "../Topics/FilterObject";
+import FilterString from "../Topics/FilterString";
+import Palindrome from "../Topics/Palindrome";
+import Sum from "../Topics/Sum";
 
 export default class TopicBrowser extends Component {
   render() {
@@ -344,7 +335,7 @@ export default class TopicBrowser extends Component {
         <Palindrome />
         <Sum />
       </div>
-    )
+    );
   }
 }
 ```
@@ -358,14 +349,14 @@ export default class TopicBrowser extends Component {
 <summary> <code> TopicBrowser.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // Topics
-import EvenAndOdd from '../Topics/EvenAndOdd'
-import FilterObject from '../Topics/FilterObject'
-import FilterString from '../Topics/FilterString'
-import Palindrome from '../Topics/Palindrome'
-import Sum from '../Topics/Sum'
+import EvenAndOdd from "../Topics/EvenAndOdd";
+import FilterObject from "../Topics/FilterObject";
+import FilterString from "../Topics/FilterString";
+import Palindrome from "../Topics/Palindrome";
+import Sum from "../Topics/Sum";
 
 export default class TopicBrowser extends Component {
   render() {
@@ -377,7 +368,7 @@ export default class TopicBrowser extends Component {
         <Palindrome />
         <Sum />
       </div>
-    )
+    );
   }
 }
 ```
@@ -389,13 +380,11 @@ export default class TopicBrowser extends Component {
 <summary> <code> EvenAndOdd.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class EvenAndOdd extends Component {
   render() {
-    return (
-      <p> EvenAndOdd Component </p>
-    )
+    return <p> EvenAndOdd Component </p>;
   }
 }
 ```
@@ -407,13 +396,11 @@ export default class EvenAndOdd extends Component {
 <summary> <code> FilterObject.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class FilterObject extends Component {
   render() {
-    return (
-      <p> FilterObject Component </p>
-    )
+    return <p> FilterObject Component </p>;
   }
 }
 ```
@@ -425,13 +412,11 @@ export default class FilterObject extends Component {
 <summary> <code> FilterString.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class FilterString extends Component {
   render() {
-    return (
-      <p> FilterString Component </p>
-    )
+    return <p> FilterString Component </p>;
   }
 }
 ```
@@ -443,13 +428,11 @@ export default class FilterString extends Component {
 <summary> <code> Palindrome.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Palindrome extends Component {
   render() {
-    return (
-      <p> Palindrome Component </p>
-    )
+    return <p> Palindrome Component </p>;
   }
 }
 ```
@@ -461,20 +444,18 @@ export default class Palindrome extends Component {
 <summary> <code> Sum.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Sum extends Component {
   render() {
-    return (
-      <p> Sum Component </p>
-    )
+    return <p> Sum Component </p>;
   }
 }
 ```
 
 </details>
 
-<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/3.png" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/3.png" /> -->
 
 ## Step 3
 
@@ -490,25 +471,25 @@ In this step, we'll start with the first topic: `EvenAndOdd`.
 
 <b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and two `span` elements.
 
-* Open `src/components/Topics/EvenAndOdd.js`.
-* Remove the `<p>` element from the `return` of the `render` method.
-* Add the component outline to the `return` of the `render` method.
-* Add the following `className` props to the outline:
-  * `div` - className="puzzleBox evenAndOddPB"
-  * `input` - className="inputLine"
-  * `button` - className="confirmationButton"
-  * Both `span`s - className="resultsBox"
-* Assign the `h4` element the value of `"Evens and Odds"`.
-* Create a `constructor` method that creates an initial state:
-  * `evenArray` - This should default to an empty array.
-  * `oddArray` - This should default to an empty array.
-  * `userInput` - This should default to an empty string.
-* Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
-* Create an `onClick` prop for the `button` element that calls a method on the class:
-  * This method should solve the toy problem.
-  * This method should update the value of `evenArray` and `oddArray` on state.
-* Assign one `span` element to display the value of `evenArray`.
-* Assign the other `span` element to display the value of `oddArray`.
+- Open `src/components/Topics/EvenAndOdd.js`.
+- Remove the `<p>` element from the `return` of the `render` method.
+- Add the component outline to the `return` of the `render` method.
+- Add the following `className` props to the outline:
+  - `div` - className="puzzleBox evenAndOddPB"
+  - `input` - className="inputLine"
+  - `button` - className="confirmationButton"
+  - Both `span`s - className="resultsBox"
+- Assign the `h4` element the value of `"Evens and Odds"`.
+- Create a `constructor` method that creates an initial state:
+  - `evenArray` - This should default to an empty array.
+  - `oddArray` - This should default to an empty array.
+  - `userInput` - This should default to an empty string.
+- Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
+- Create an `onClick` prop for the `button` element that calls a method on the class:
+  - This method should solve the toy problem.
+  - This method should update the value of `evenArray` and `oddArray` on state.
+- Assign one `span` element to display the value of `evenArray`.
+- Assign the other `span` element to display the value of `oddArray`.
 
 <details>
 
@@ -582,9 +563,9 @@ render() {
 
 What's `e`? `e` is the event. In this instance we can use the event to get the current value inside of the `input` element. We can access this by doing `e.target.value`. With this setup every time a user types in this `input` field our arrow function gets called, capturing the event, and then calls our method on the class called `handleChange` and passes the value that's currently in the input field. For example if I typed in the `input` field "1,2" then `handleChange` will have been called three times. Every key stroke invokes `handleChange` and passes in the current value, this would look like:
 
-* First Time: `e.target.value` = "1"
-* Second Time: `e.target.value` = "1,"
-* Third Time: `e.target.value` = "1,2"
+- First Time: `e.target.value` = "1"
+- Second Time: `e.target.value` = "1,"
+- Third Time: `e.target.value` = "1,2"
 
 Let's add a method on our class called `handleChange` to update our `state` property `userInput`.
 
@@ -629,18 +610,17 @@ How you solve the toy problem is up to you, if you can't figure it out check out
 <summary> <code> EvenAndOdd.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class EvenAndOdd extends Component {
-
   constructor() {
     super();
 
     this.state = {
       evenArray: [],
       oddArray: [],
-      userInput: ''
-    }
+      userInput: ""
+    };
   }
 
   handleChange(val) {
@@ -648,15 +628,15 @@ export default class EvenAndOdd extends Component {
   }
 
   assignEvenAndOdds(userInput) {
-    let arr = userInput.split(',');
+    let arr = userInput.split(",");
     let evens = [];
     let odds = [];
 
-    for ( let i = 0; i < arr.length; i++ ) {
-      if ( arr[i] % 2 === 0 ) {
-        evens.push( parseInt(arr[i], 10) );
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        evens.push(parseInt(arr[i], 10));
       } else {
-        odds.push( parseInt(arr[i], 10) );
+        odds.push(parseInt(arr[i], 10));
       }
     }
 
@@ -667,12 +647,29 @@ export default class EvenAndOdd extends Component {
     return (
       <div className="puzzleBox evenAndOddPB">
         <h4> Evens and Odds </h4>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
-        <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
-        <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
-        <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
+        <input
+          className="inputLine"
+          onChange={e => this.handleChange(e.target.value)}
+        />
+        <button
+          className="confirmationButton"
+          onClick={() => {
+            this.assignEvenAndOdds(this.state.userInput);
+          }}
+        >
+          {" "}
+          Split{" "}
+        </button>
+        <span className="resultsBox">
+          {" "}
+          Evens: {JSON.stringify(this.state.evenArray)}{" "}
+        </span>
+        <span className="resultsBox">
+          {" "}
+          Odds: {JSON.stringify(this.state.oddArray)}
+        </span>
       </div>
-    )
+    );
   }
 }
 ```
@@ -695,26 +692,26 @@ In this step, we'll build out the `FilterObject` component.
 
 <b>The component outline</b>: One parent `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and one `span` element.
 
-* Open `src/components/Topics/FilterObject.js`.
-* Remove the `<p>` element from the `return` of the `render` method.
-* Add the component outline to the `return` of the `render` method.
-* Add the following `className` props to the outline:
-  * `div` - className="puzzleBox filterObjectPB"
-  * The first `span` - className="puzzleText"
-  * `input` - className="inputLine"
-  * `button` - className="confirmationButton"
-  * The last `span` - className="resultsBox filterObjectRB"
-* Assign the `h4` element the value of `"Filter Object"`.
-* Create a `constructor` method that creates an initial state:
-  * `unFilteredArray` - This should default to an array of objects. Try to pick an array of objects that share similiar propteries but they should not be indentical objects.
-  * `userInput` - This should default to an empty string.
-  * `filteredArray` - This should default to an empty array.
-* Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
-* Create an `onClick` prop for the `button` element that calls a method on the class:
-  * This method should solve the toy problem.
-  * This method should update the value of `filteredArray`.
-* Assign the first `span` element the value of `unFilteredArray`.
-* Assign the last `span` element the value of `filteredArray`.
+- Open `src/components/Topics/FilterObject.js`.
+- Remove the `<p>` element from the `return` of the `render` method.
+- Add the component outline to the `return` of the `render` method.
+- Add the following `className` props to the outline:
+  - `div` - className="puzzleBox filterObjectPB"
+  - The first `span` - className="puzzleText"
+  - `input` - className="inputLine"
+  - `button` - className="confirmationButton"
+  - The last `span` - className="resultsBox filterObjectRB"
+- Assign the `h4` element the value of `"Filter Object"`.
+- Create a `constructor` method that creates an initial state:
+  - `unFilteredArray` - This should default to an array of objects. Try to pick an array of objects that share similiar propteries but they should not be indentical objects.
+  - `userInput` - This should default to an empty string.
+  - `filteredArray` - This should default to an empty array.
+- Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
+- Create an `onClick` prop for the `button` element that calls a method on the class:
+  - This method should solve the toy problem.
+  - This method should update the value of `filteredArray`.
+- Assign the first `span` element the value of `unFilteredArray`.
+- Assign the last `span` element the value of `filteredArray`.
 
 <details>
 
@@ -835,34 +832,33 @@ How you solve the toy problem is up to you, if you can't figure it out check out
 <summary> <code> FilterObject.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class FilterObject extends Component {
-
   constructor() {
     super();
 
     this.state = {
       employees: [
         {
-          name: 'Jimmy Joe',
-          title: 'Hack0r',
-          age: 12,
+          name: "Jimmy Joe",
+          title: "Hack0r",
+          age: 12
         },
         {
-          name: 'Jeremy Schrader',
+          name: "Jeremy Schrader",
           age: 24,
-          hairColor: 'brown'
+          hairColor: "brown"
         },
         {
-          name: 'Carly Armstrong',
-          title: 'CEO',
+          name: "Carly Armstrong",
+          title: "CEO"
         }
       ],
 
-      userInput: '',
+      userInput: "",
       filteredEmployees: []
-    }
+    };
   }
 
   handleChange(val) {
@@ -873,8 +869,8 @@ export default class FilterObject extends Component {
     let employees = this.state.employees;
     let filteredEmployees = [];
 
-    for ( let i = 0; i < employees.length; i++ ) {
-      if ( employees[i].hasOwnProperty(prop) ) {
+    for (let i = 0; i < employees.length; i++) {
+      if (employees[i].hasOwnProperty(prop)) {
         filteredEmployees.push(employees[i]);
       }
     }
@@ -886,12 +882,31 @@ export default class FilterObject extends Component {
     return (
       <div className="puzzleBox filterObjectPB">
         <h4> Filter Object </h4>
-        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
-        <button className="confirmationButton" onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
-        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
+        <span className="puzzleText">
+          {" "}
+          Original: {JSON.stringify(this.state.employees, null, 10)}{" "}
+        </span>
+        <input
+          className="inputLine"
+          onChange={e => this.handleChange(e.target.value)}
+        />
+        <button
+          className="confirmationButton"
+          onClick={() => this.filterEmployees(this.state.userInput)}
+        >
+          {" "}
+          Filter{" "}
+        </button>
+        <span className="resultsBox filterObjectRB">
+          {" "}
+          Filtered: {JSON.stringify(
+            this.state.filteredEmployees,
+            null,
+            10
+          )}{" "}
+        </span>
       </div>
-    )
+    );
   }
 }
 ```
@@ -914,26 +929,26 @@ In this step, we'll build out the `FilterString` component.
 
 <b>The component outline:</b> One parent `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and another `span` element.
 
-* Open `src/components/Topics/FilterString.js`.
-* Remove the `<p>` element from the `return` of the `render` method.
-* Add the component outline to the `return` of the `render` method.
-* Add the following `className` props to the outline:
-  * `div` - className="puzzleBox filterStringPB"
-  * The first `span` - className="puzzleText"
-  * `input` - className="inputLine"
-  * `button` - className="confirmationButton"
-  * The last `span` - className="resultsBox filterStringRB"
-* Assign the `h4` element the value of `"Filter String`.
-* Create a `constructor` method that creates an initial state:
-  * `unFilteredArray` - This should default to an array of strings. You choose what strings go in the array.
-  * `userInput` - This should default to an empty string.
-  * `filteredArray` - This should default to an empty array.
-* Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
-* Create an `onClick` prop for the `button` element that calls a method on the class:
-  * This method should solve the toy problem.
-  * This method should update the value of `filteredArray`.
-* Assign the first `span` element the value of `unFilteredArray`.
-* Assign the last `span` element the value of `filteredArray`.
+- Open `src/components/Topics/FilterString.js`.
+- Remove the `<p>` element from the `return` of the `render` method.
+- Add the component outline to the `return` of the `render` method.
+- Add the following `className` props to the outline:
+  - `div` - className="puzzleBox filterStringPB"
+  - The first `span` - className="puzzleText"
+  - `input` - className="inputLine"
+  - `button` - className="confirmationButton"
+  - The last `span` - className="resultsBox filterStringRB"
+- Assign the `h4` element the value of `"Filter String`.
+- Create a `constructor` method that creates an initial state:
+  - `unFilteredArray` - This should default to an array of strings. You choose what strings go in the array.
+  - `userInput` - This should default to an empty string.
+  - `filteredArray` - This should default to an empty array.
+- Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
+- Create an `onClick` prop for the `button` element that calls a method on the class:
+  - This method should solve the toy problem.
+  - This method should update the value of `filteredArray`.
+- Assign the first `span` element the value of `unFilteredArray`.
+- Assign the last `span` element the value of `filteredArray`.
 
 <details>
 
@@ -1038,16 +1053,24 @@ How you solve the toy problem is up to you, if you can't figure it out check out
 <summary> <code> FilterString.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class FilterString extends Component {
-
   constructor() {
     super();
 
     this.state = {
-      names: ['James', 'Jessica', 'Melody', 'Tyler', 'Blake', 'Jennifer', 'Mark', 'Maddy'],
-      userInput: '',
+      names: [
+        "James",
+        "Jessica",
+        "Melody",
+        "Tyler",
+        "Blake",
+        "Jennifer",
+        "Mark",
+        "Maddy"
+      ],
+      userInput: "",
       filteredNames: []
     };
   }
@@ -1060,8 +1083,8 @@ export default class FilterString extends Component {
     let names = this.state.names;
     let filteredNames = [];
 
-    for ( let i = 0; i < names.length; i++ ) {
-      if ( names[i].includes(userInput) ) {
+    for (let i = 0; i < names.length; i++) {
+      if (names[i].includes(userInput)) {
         filteredNames.push(names[i]);
       }
     }
@@ -1073,12 +1096,31 @@ export default class FilterString extends Component {
     return (
       <div className="puzzleBox filterStringPB">
         <h4> Filter String </h4>
-        <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
-        <button className="confirmationButton" onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
-        <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
+        <span className="puzzleText">
+          {" "}
+          Names: {JSON.stringify(this.state.names, null, 10)}{" "}
+        </span>
+        <input
+          className="inputLine"
+          onChange={e => this.handleChange(e.target.value)}
+        />
+        <button
+          className="confirmationButton"
+          onClick={() => this.filterNames(this.state.userInput)}
+        >
+          {" "}
+          Filter{" "}
+        </button>
+        <span className="resultsBox filterStringRB">
+          {" "}
+          Filtered Names: {JSON.stringify(
+            this.state.filteredNames,
+            null,
+            10
+          )}{" "}
+        </span>
       </div>
-    )
+    );
   }
 }
 ```
@@ -1101,23 +1143,23 @@ In this step, we'll build out the `Palindrome` component.
 
 <b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and one `span` element.
 
-* Open `src/components/Topics/Palindrome.js`.
-* Remove the `<p>` element from the `return` of the `render` method.
-* Add the component outline to the `return` of the `render` method.
-* Add the following `className` props to the outline:
-  * `div` - className="puzzleBox filterStringPB"
-  * `input` - className="inputLine"
-  * `button` - className="confirmationButton"
-  * `span` - className="resultsBox"
-* Assign the `h4` element the value of `"Palindrome"`.
-* Create a `constructor` method that creates an initial state:
-  * `userInput` - This should default to an empty string.
-  * `palindrome` - This should default to an empty string.
-* Create an `onChange` prop for the input element that updates the value of `userInput` on state.
-* Create an `onClick` prop for the `button` element that calls a method on the class:
-  * This method should solve the toy problem.
-  * This method should update the value of `palindrome`.
-* Assign the `span` element the value of `palindrome`.
+- Open `src/components/Topics/Palindrome.js`.
+- Remove the `<p>` element from the `return` of the `render` method.
+- Add the component outline to the `return` of the `render` method.
+- Add the following `className` props to the outline:
+  - `div` - className="puzzleBox filterStringPB"
+  - `input` - className="inputLine"
+  - `button` - className="confirmationButton"
+  - `span` - className="resultsBox"
+- Assign the `h4` element the value of `"Palindrome"`.
+- Create a `constructor` method that creates an initial state:
+  - `userInput` - This should default to an empty string.
+  - `palindrome` - This should default to an empty string.
+- Create an `onChange` prop for the input element that updates the value of `userInput` on state.
+- Create an `onClick` prop for the `button` element that calls a method on the class:
+  - This method should solve the toy problem.
+  - This method should update the value of `palindrome`.
+- Assign the `span` element the value of `palindrome`.
 
 <details>
 
@@ -1217,16 +1259,15 @@ How you solve the toy problem is up to you, if you can't figure it out check out
 <summary> <code> Palindrome.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Palindrome extends Component {
-
   constructor() {
     super();
 
     this.state = {
-      userInput: '',
-      palindrome: ''
+      userInput: "",
+      palindrome: ""
     };
   }
 
@@ -1237,14 +1278,14 @@ export default class Palindrome extends Component {
   isPalindrome(userInput) {
     let forwards = userInput;
     let backwards = userInput;
-    backwards = backwards.split('');
+    backwards = backwards.split("");
     backwards = backwards.reverse();
-    backwards = backwards.join('');
+    backwards = backwards.join("");
 
-    if ( forwards === backwards ) {
-      this.setState({ palindrome: 'true' });
+    if (forwards === backwards) {
+      this.setState({ palindrome: "true" });
     } else {
-      this.setState({ palindrome: 'false' });
+      this.setState({ palindrome: "false" });
     }
   }
 
@@ -1252,11 +1293,23 @@ export default class Palindrome extends Component {
     return (
       <div className="puzzleBox palindromePB">
         <h4> Palindrome </h4>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
-        <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
-        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
+        <input
+          className="inputLine"
+          onChange={e => this.handleChange(e.target.value)}
+        />
+        <button
+          className="confirmationButton"
+          onClick={() => this.isPalindrome(this.state.userInput)}
+        >
+          {" "}
+          Check{" "}
+        </button>
+        <span className="resultsBox">
+          {" "}
+          Palindrome: {this.state.palindrome}{" "}
+        </span>
       </div>
-    )
+    );
   }
 }
 ```
@@ -1279,25 +1332,25 @@ In this step, we'll build out the `Sum` component.
 
 <b>The component outline:</b> One parent `div` element, one `h4` element, two `input` elements, one `button` element, and one `span` element.
 
-* Open src/components/Topics/Sum.js.
-* Remove the `<p>` element from the `return` of the `render` method.
-* Add the component outline to the `return` of the `render` method.
-* Add the following `className` props to the outline:
-  * `div` - className="puzzleBox sumPB"
-  * The two `input` - className="inputLine"
-  * `button` - className="confirmationButton"
-  * `span` - className="resultsBox"
-* Assign the `h4` element the `value` of `"Sum"`.
-* Create a `constructor` method that creates an initital state:
-  * `number1` - This should default to `0`.
-  * `number2` - This should default to `0`.
-  * `sum` - This should default to `null`.
-* Create an `onChange` prop for the first `input` element that updates the value of `number1` on state.
-* Create an `onChange` prop for the second `input` element that updates the value of `number2` on state.
-* Create an `onClick` prop for the button element that calls a method on the class:
-  * This method should solve the toy problem.
-  * This method should update the value of `sum`.
-* Assign the `span` element the value of `sum`.
+- Open src/components/Topics/Sum.js.
+- Remove the `<p>` element from the `return` of the `render` method.
+- Add the component outline to the `return` of the `render` method.
+- Add the following `className` props to the outline:
+  - `div` - className="puzzleBox sumPB"
+  - The two `input` - className="inputLine"
+  - `button` - className="confirmationButton"
+  - `span` - className="resultsBox"
+- Assign the `h4` element the `value` of `"Sum"`.
+- Create a `constructor` method that creates an initital state:
+  - `number1` - This should default to `0`.
+  - `number2` - This should default to `0`.
+  - `sum` - This should default to `null`.
+- Create an `onChange` prop for the first `input` element that updates the value of `number1` on state.
+- Create an `onChange` prop for the second `input` element that updates the value of `number2` on state.
+- Create an `onClick` prop for the button element that calls a method on the class:
+  - This method should solve the toy problem.
+  - This method should update the value of `sum`.
+- Assign the `span` element the value of `sum`.
 
 <details>
 
@@ -1406,10 +1459,9 @@ How you solve the toy problem is up to you, if you can't figure it out check out
 <summary> <code> Sum.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Sum extends Component {
-
   constructor() {
     super();
 
@@ -1417,7 +1469,7 @@ export default class Sum extends Component {
       number1: 0,
       number2: 0,
       sum: null
-    }
+    };
   }
 
   updateNumber1(val) {
@@ -1436,12 +1488,26 @@ export default class Sum extends Component {
     return (
       <div className="puzzleBox sumPB">
         <h4> Sum </h4>
-        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }/>
-        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }/>
-        <button className="confirmationButton" onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
+        <input
+          className="inputLine"
+          type="number"
+          onChange={e => this.updateNumber1(e.target.value)}
+        />
+        <input
+          className="inputLine"
+          type="number"
+          onChange={e => this.updateNumber2(e.target.value)}
+        />
+        <button
+          className="confirmationButton"
+          onClick={() => this.add(this.state.number1, this.state.number2)}
+        >
+          {" "}
+          Add{" "}
+        </button>
         <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
-    )
+    );
   }
 }
 ```
@@ -1467,8 +1533,7 @@ To take this project a step further try to add more toy problems to the project 
 
 // Import statements allow us to import JavaScript from external modules
 // or our own files contained in our project
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
 
 // React uses es6 Classes for it's components.
 // We extend from the `Component` module to get access to the `render` method
@@ -1478,14 +1543,14 @@ class MyComponent extends Component {
     super();
     // this.state is an object that houses local data our component cares about
     this.state = {
-      name: 'Steven'
+      name: "Steven"
     };
   }
   // render will return JSX (HTML-like syntax). This is what's rendered to the screen
   render() {
     // JSX uses HTML-like syntax to create our component content
     // It uses single curly braces `{}` to inject JavaScript into our HTML
-    return <h1 onClick={() => alert('Clicked!')}>Hello, {this.state.name}!</h1>
+    return <h1 onClick={() => alert("Clicked!")}>Hello, {this.state.name}!</h1>;
   }
 }
 
@@ -1493,10 +1558,9 @@ class MyComponent extends Component {
 export default MyComponent;
 ```
 
-* [JSX](https://reactjs.org/docs/introducing-jsx.html)
+- [JSX](https://reactjs.org/docs/introducing-jsx.html)
 
 </details>
-
 
 ## Contributions
 
@@ -1509,5 +1573,3 @@ If you see a problem or a typo, please fork, make the necessary changes, and cre
 <p align="center">
 <img src="https://s3.amazonaws.com/devmountain/readme-logo.png" width="250">
 </p>
-
-
